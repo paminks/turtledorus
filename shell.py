@@ -2,11 +2,13 @@ import turtle
 import math
 
 
-turtle.speed(0.02)
+turtle.speed(0.2)
 center_x = 0
 center_y = 0
-
 turtle.setup(width=500, height=500)
+
+numOfTriangles = int(input("Please enter number of triangles: "))
+
 
 lastX = 0
 lastY = 0
@@ -33,16 +35,15 @@ updatePos()
 goCenter()
 goBack()
 
-#draws the remaning triangles
-#if you wish to change number of triangles
-#please change this
-for i in range(1,600):   
+#draws rest of the triangles 
+for i in range(1,numOfTriangles):   
     angle = math.degrees(math.atan(math.sqrt(i+1)/(i)))
     turtle.left(angle)
     turtle.forward(10 * math.sqrt(2))
     updatePos()
     goCenter()
     goBack()
+
 
 
 turtle.mainloop()
