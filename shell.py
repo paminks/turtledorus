@@ -45,15 +45,4 @@ for i in range(1,600):
     goBack()
 
 
-
-
-
-
-
-
-
-
-
-
-
 turtle.mainloop()
